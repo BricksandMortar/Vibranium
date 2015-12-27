@@ -54,6 +54,9 @@
         {% endfor %}
         </ul>
         <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a id="github-repo" href="https://https://github.com/{{site.github.user}}/{{site.github.repo}}">Github</a>
+            </li>
         {% for p in site.headerLinks %}
           <li>
             <a href="{{p.url}}">{{p.title}}</a>
@@ -73,9 +76,9 @@
       <h1 class="home-title">{{site.name}}</h1>
       <p class="lead">{{page.description}}</p>
       <p class="lead">
-        <a id="download" href="" class="btn btn-outline-inverse btn-lg">Download</a>
+        <a id="github-download" href="" class="btn btn-outline-inverse btn-lg">Download</a>
       </p>
-      <p class="version"></p>
+      <a class="version"></p>
     </div>
   </div>
 
@@ -160,9 +163,8 @@
   $.getJSON( api)
   .done(function( data ) {
     $(data).each(function() {
-var output  = '<a href="' + this.html_url + '">' + this.tag_name + '</a>';
-$('.version').append(output);
-$('#download').attr('href', this.zipball_url);
+$('.version').append(this.tag_name).attr('href', this.html_url);
+$('#github-download').attr('href', this.zipball_url);
     });
   });
 });
