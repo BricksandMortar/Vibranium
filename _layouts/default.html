@@ -125,24 +125,9 @@
             <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user={{site.github.user}}&amp;repo={{site.github.repo}}&amp;type=fork&amp;count=true" width="90" height="20" title="Fork on GitHub"></iframe>
           </li>
         {% endif %}
-        {% if site.twitter.enabled %}
-          <li>
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{site.github.url}}" data-count="horizontal" data-via="{{site.twitter.via}}" data-text="{{site.name}}" data-hashtags="{{site.twitter.hash}}">Tweet</a>
-          </li>
-        {% endif %}
         {% if site.twitter.account %}
           <li>
             <a href="https://twitter.com/{{site.twitter.account}}" class="twitter-follow-button" data-show-count="true">Follow @{{site.twitter.account}}</a>
-          </li>
-        {% endif %}
-        {% if site.facebook.enabled %}
-          <li>
-            <div class="fb-like" data-href="{{site.github.url}}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
-          </li>
-        {% endif %}
-        {% if site.facebook.profileUrl %}
-          <li>
-            <div class="fb-follow" data-href="{{site.facebook.profileUrl}}" data-layout="button_count" data-show-faces="false"></div>
           </li>
         {% endif %}
         </ul>
@@ -152,13 +137,11 @@
         Licensed under <a href="{{site.licenseUrl}}" target="_blank">{{site.license}}</a>,
         documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
       </p>
-      <p>
-        Documentation template by <a href="http://getbootstrap.com">Bootstrap team</a>,
-        generated with <a href="https://github.com/mistic100/jekyll-bootstrap-doc">Jekyll Bootstrap Doc</a>
-      </p>
 
       <ul class="bs-docs-footer-links muted">
         <li class="version"></li>
+          <li>&middot;</li>
+          <li>Made by <a href="http://bricksandmortarstudio.com">Bricks and Mortar</a></li>
       {% for l in site.footerLinks %}
         <li>&middot;</li>
         <li><a href="{{l.url}}">{{l.title}}</a></li>
@@ -179,7 +162,7 @@
     $(data).each(function() {
 var output  = '<a href="' + this.html_url + '">' + this.tag_name + '</a>';
 $('.version').append(output);
-$('#download').attr('href', hyperlink);
+$('#download').attr('href', this.zipball_url);
     });
   });
 });
@@ -199,18 +182,6 @@ $('#download').attr('href', hyperlink);
       js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
       return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
     }(document, "script", "twitter-wjs"));
-  </script>
-  {% endif %}
-
-  {% if site.facebook.enabled or site.facebook.profileUrl %}
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
   </script>
   {% endif %}
 

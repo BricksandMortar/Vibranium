@@ -37,12 +37,7 @@ twitter:
   enabled: true
   via:
   hash:
-  account:
-
-# facebook buttons
-facebook:
-  enabled: true
-  profileUrl:
+  account: arranf
 
 
 exclude: ['README.md', 'LICENSE', 'bower.json', 'Gemfile.lock', 'Gemfile']
