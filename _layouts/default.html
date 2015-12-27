@@ -73,9 +73,9 @@
       <h1 class="home-title">{{site.name}}</h1>
       <p class="lead">{{page.description}}</p>
       <p class="lead">
-        <a href="{{site.downloadUrl}}" class="btn btn-outline-inverse btn-lg">Download</a>
+        <a id="download" href="" class="btn btn-outline-inverse btn-lg">Download</a>
       </p>
-      <p class="version">Currently </p>
+      <p class="version"></p>
     </div>
   </div>
 
@@ -117,12 +117,12 @@
     <div class="container">
       <div class="bs-docs-social">
         <ul class="bs-docs-social-buttons">
-        {% if site.githubButton.user and site.githubButton.repo %}
+        {% if site.github.user and site.github.repo %}
           <li>
-            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user={{site.githubButton.user}}&amp;repo={{site.githubButton.repo}}&amp;type=watch&amp;count=true" width="90" height="20" title="Star on GitHub"></iframe>
+            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user={{site.github.user}}&amp;repo={{site.github.repo}}&amp;type=watch&amp;count=true" width="90" height="20" title="Star on GitHub"></iframe>
           </li>
           <li>
-            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user={{site.githubButton.user}}&amp;repo={{site.githubButton.repo}}&amp;type=fork&amp;count=true" width="90" height="20" title="Fork on GitHub"></iframe>
+            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user={{site.github.user}}&amp;repo={{site.github.repo}}&amp;type=fork&amp;count=true" width="90" height="20" title="Fork on GitHub"></iframe>
           </li>
         {% endif %}
         {% if site.twitter.enabled %}
@@ -158,7 +158,7 @@
       </p>
 
       <ul class="bs-docs-footer-links muted">
-        <li class="version">Currently </li>
+        <li class="version"></li>
       {% for l in site.footerLinks %}
         <li>&middot;</li>
         <li><a href="{{l.url}}">{{l.title}}</a></li>
@@ -176,10 +176,10 @@
   var api = 'https://api.github.com/repos/' + 'BricksandMortar' +'/' + 'IdealPostcodes' + '/releases/latest';
   $.getJSON( api)
   .done(function( data ) {
-
     $(data).each(function() {
-var output  = this.tag_name;
+var output  = '<a href="' + this.html_url + '">' + this.tag_name + '</a>';
 $('.version').append(output);
+$('#download').attr('href', hyperlink);
     });
   });
 });
