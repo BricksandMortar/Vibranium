@@ -163,7 +163,7 @@
   $.getJSON( api)
   .done(function( data ) {
     $(data).each(function() {
-$('.version').append(this.tag_name).attr('href', this.html_url);
+$('.version').append(this.name).attr('href', this.html_url);
 $('#github-download').attr('href', this.zipball_url);
     });
   });
