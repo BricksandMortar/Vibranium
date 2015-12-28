@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Home
-description: Documentation for a Project
+description: Simple documentation template for Github pages
 isHome: true
 ---
 
 <section class="bs-docs-section">
   <h1 id="overview" class="page-header">Overview</h1>
-
+  
   <blockquote>
     This is a Jekyll template I use for my GitHub projects documentations. It is heavily based on official Bootstrap documentation and is designed to be quickly deployed.
   </blockquote>
@@ -23,9 +23,9 @@ isHome: true
     <li>Github counters</li>
     <li>Twitter &amp; Facebook buttons</li>
   </ul>
-
+  
   <h3 id="examples">Examples</h3>
-
+  
   <ul>
     <li><a href="http://mistic100.github.io/jQuery-highlightTextarea/">jQuery highlightTextarea</a></li>
     <li><a href="http://mistic100.github.io/angular-smilies">AngularJS Smilies</a></li>
@@ -112,7 +112,7 @@ bundle exec jekyll serve
       </thead>
       <tbody>
         <tr>
-          <td>github</td>
+          <td>githubButton</td>
           <td>Data used to generate <a href="http://ghbtns.com/">GitHub Buttons</a>. Provide <code>user</code> and <code>repo</code></td>
         </tr>
         <tr>
@@ -162,7 +162,7 @@ description: Simple documentation template for Github pages
 {% endhighlight %}
 
   <p>Set <code>isHome</code> to <code>true</code> on the main page file, the homepage will have a bigger header with a central download button.</p>
-
+  
 {% highlight html %}
 ---
 ..........
@@ -171,7 +171,7 @@ isHome: true
 {% endhighlight %}
 
   <p>Set <code>hide</code> to <code>true</code> to hide a page from the main menu, the page will still be accessible with direct link. <a href="hidden.html">Example</a>.</p>
-
+  
 {% highlight html %}
 ---
 ..........
