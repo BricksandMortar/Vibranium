@@ -12,8 +12,10 @@
   <![endif]-->
 
   <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href="{{site.github.url}}/assets/css/docs.min.css" rel="stylesheet">
   <link href="{{site.github.url}}/assets/css/style.css" rel="stylesheet">
+
 
   <style>
     #content {
@@ -55,7 +57,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li>
-              <a id="github-repo" href="https://https://github.com/{{site.github.user}}/{{site.github.repo}}">Github</a>
+              <a id="github-repo" href="https://https://github.com/{{site.github.user}}/{{site.github.repo}}"> <i class="fa fa-github fa-lg"></i> Github</a>
             </li>
         {% for p in site.headerLinks %}
           <li>
@@ -81,15 +83,6 @@
       <a class="version"></a>
     </div>
   </div>
-
-<div class="container bs-docs-container">
-    <div class="row">
-      <div class="col-md-12">
-          <h1 id="intro" class="page-header">A Bricks and Mortar Studio Project</h1>
-          <p>Bricks and Mortar Studio releases all of our Rock RMS plugins as open-source. If you or your church can afford to, please consider purchasing this plugin on the <a href="'{{site.rockstore.url}}">Rock Store</a>. Click here to read more about the benefits of purchasing for you, us, and the wider Rock community.
-      </div>
-    </div>
-  </div>
   {% else %}
   <div class="bs-docs-header" id="content">
     <div class="container">
@@ -99,27 +92,46 @@
   </div>
   {% endif %}
 
-  <div class="container bs-docs-container">
+  <div class="container content">
     <div class="row">
       <!-- Content
       =========================================== -->
-      <div class="col-md-9" role="main">
+      <div class="col-md-12 text-center landing">
         {{content}}
-      </div>
-
-      <!-- Page navigation
-      =========================================== -->
-      <div class="col-md-3" role="complementary">
-        <div class="bs-docs-sidebar hidden-print">
-          <ul class="nav bs-docs-sidenav">
-          </ul>
-          <a class="back-to-top" href="#top">
-            <i class="glyphicon glyphicon-chevron-up"></i> Back to top
-          </a>
-        </div>
       </div>
     </div>
   </div>
+
+<div class="about-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Bricks and Mortar</h1>
+      </div>
+    </div>
+    <div class="row" id="about">
+      <div class="col-md-3">
+        <i class="fa fa-male fa-5x"></i>
+      </div>
+      <div class="col-md-9">
+    </div>
+  </div>
+</div>
+</div>
+      <!-- Generic About
+      ============================================== -->
+
+
+        <!-- <div class="buffer">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+                <h1 id="intro">A Bricks and Mortar Studio Project</h1>
+                <p>Bricks and Mortar Studio releases all of our Rock RMS plugins as open-source. If you or your church can afford to, please consider purchasing this plugin on the <a href="'{{site.rockstore.url}}">Rock Store</a>. Click here to read more about the benefits of purchasing for you, us, and the wider Rock community.
+            </div>
+          </div>
+        </div>
+        </div> -->
 
 
   <!-- Footer
