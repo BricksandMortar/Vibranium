@@ -132,35 +132,15 @@
   =========================================== -->
   <footer class="bs-docs-footer" role="contentinfo">
     <div class="container">
-      <div class="bs-docs-social">
-        <ul class="bs-docs-social-buttons">
-        {% if site.github.user and site.github.repo %}
-          <li>
-            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user={{site.github.user}}&amp;repo={{site.github.repo}}&amp;type=watch&amp;count=true" width="90" height="20" title="Star on GitHub"></iframe>
-          </li>
-          <li>
-            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user={{site.github.user}}&amp;repo={{site.github.repo}}&amp;type=fork&amp;count=true" width="90" height="20" title="Fork on GitHub"></iframe>
-          </li>
-        {% endif %}
-        {% if site.twitter.account %}
-          <li>
-            <a href="https://twitter.com/{{site.twitter.account}}" class="twitter-follow-button" data-show-count="true">Follow @{{site.twitter.account}}</a>
-          </li>
-        {% endif %}
-        </ul>
-      </div>
 
       <p>
         Licensed under <a href="{{site.licenseUrl}}" target="_blank">{{site.license}}</a>,
         documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
       </p>
-
+      <p>Made with <span style="color:#E96040;">&#9829;</span> by <a href="http://bricksandmortarstudio.com">Bricks and Mortar Studio</a></p>
       <ul class="bs-docs-footer-links muted">
         <li class="version"></li>
-          <li>&middot;</li>
-          <li>Made by <a href="http://bricksandmortarstudio.com">Bricks and Mortar</a></li>
       {% for l in site.footerLinks %}
-        <li>&middot;</li>
         <li><a href="{{l.url}}">{{l.title}}</a></li>
       {% endfor %}
       </ul>

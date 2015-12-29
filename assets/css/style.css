@@ -6754,6 +6754,9 @@ h6 {
 .back-top-top {
   font-size: 13px;
 }
+.bs-docs-footer p {
+  color: #99979c;
+}
 #content {
   position: relative;
 }
