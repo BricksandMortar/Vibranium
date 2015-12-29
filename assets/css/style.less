@@ -1,9 +1,16 @@
 @import "/bootstrap-3.3.6/less/bootstrap.less";
 
+p, h1, h2, h3, h4, h5, h6 {
+  color: #333333;
+}
+
 .bs-docs-masthead {
   padding-top:50px;
   padding-bottom:40px;
   margin-bottom:20px;
+  .btn:hover {
+    color: #E8773E;
+  }
 }
 .bs-docs-header {
   h1, p {
@@ -31,8 +38,9 @@
   width:30%;
   background:linear-gradient(135deg,transparent 50px,white 50px);
 }
-.about-container {
-  background-color:#EEE;
+
+.version {
+  color: #fff;
 }
 
 .landing {
@@ -45,6 +53,12 @@
     margin-right: 4em;
     padding-bottom: @padding-large-vertical;
   }
+}
+
+.about-container {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 3em;
+  padding-top: 20px;
 }
 
 /* Small devices (tablets, 768px and up) */
