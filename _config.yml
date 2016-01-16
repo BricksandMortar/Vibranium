@@ -11,16 +11,17 @@ headerLinks:
 
 # list if additional links on the footer
 footerLinks:
-  - title: GitHub
+  - title: <i class="fa fa-github"></i>GitHub
     url: https://github.com/mistic100/jekyll-bootstrap-doc
-  - title: Issues
+  - title: <i class="fa fa-exclamation-circle"></i>Issues
     url: https://github.com/mistic100/jekyll-bootstrap-doc/issues?state=open
 
 # header
 header:
-  color1: "#D43F3A"
-  color2: "#D4813A"
-  trianglify: true
+  #color1: "#D43F3A"
+  #color2: "#D4813A"
+  color1: "#e64c29"
+  color2: "#e64c29"
 
 rockstore:
   url:

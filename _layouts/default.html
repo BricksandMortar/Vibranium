@@ -18,7 +18,9 @@
   <style>
     #content {
       background:{{site.header.color1}};
-      background:linear-gradient(135deg, {{site.header.color1}}, {{site.header.color2}});
+      background-image: linear-gradient(to bottom,{{site.header.color1}},{{site.header.color2}} 100%);
+      background-image: -o-linear-gradient(top,{{site.header.color1}} 0,{{site.header.color2}} 100%);
+      background-image: -webkit-linear-gradient(top,{{site.header.color1}} 0,{{site.header.color2}} 100%);
     }
   </style>
 
@@ -46,22 +48,15 @@
         <ul class="nav navbar-nav">
         {% assign sorted_pages = site.pages | sort:"name" %}
         {% for p in sorted_pages %}
-          {% if p.download != true and p.hide != true and p.title !=  %}
+          {% if p.hide != true and p.title !=  %}
           <li {% if page.title == p.title %}class="active"{% endif %}>
             <a href="{{site.github.url}}{{p.url}}">{{p.title}}</a>
           </li>
           {% endif %}
         {% endfor %}
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a id="github-repo" href="https://https://github.com/{{site.github.user}}/{{site.github.repo}}">Github</a>
-            </li>
-        {% for p in site.headerLinks %}
-          <li>
-            <a href="{{p.url}}">{{p.title}}</a>
-          </li>
-        {% endfor %}
+        <li>
+          <a id="github-repo" href="https://https://github.com/{{site.github.user}}/{{site.github.repo}}">Github</a>
+        </li>
         </ul>
       </nav>
     </div>
@@ -126,45 +121,23 @@
   =========================================== -->
   <footer class="bs-docs-footer" role="contentinfo">
     <div class="container">
-      <div class="bs-docs-social">
-        <ul class="bs-docs-social-buttons">
-        {% if site.github.user and site.github.repo %}
-          <li>
-            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user={{site.github.user}}&amp;repo={{site.github.repo}}&amp;type=watch&amp;count=true" width="90" height="20" title="Star on GitHub"></iframe>
-          </li>
-          <li>
-            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user={{site.github.user}}&amp;repo={{site.github.repo}}&amp;type=fork&amp;count=true" width="90" height="20" title="Fork on GitHub"></iframe>
-          </li>
-        {% endif %}
-        {% if site.twitter.account %}
-          <li>
-            <a href="https://twitter.com/{{site.twitter.account}}" class="twitter-follow-button" data-show-count="true">Follow @{{site.twitter.account}}</a>
-          </li>
-        {% endif %}
-        </ul>
-      </div>
-
-      <p>
-        Licensed under <a href="{{site.licenseUrl}}" target="_blank">{{site.license}}</a>,
-        documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
-      </p>
-
       <ul class="bs-docs-footer-links muted">
-        <li class="version"></li>
-          <li>&middot;</li>
-          <li>Made by <a href="http://bricksandmortarstudio.com">Bricks and Mortar</a></li>
       {% for l in site.footerLinks %}
-        <li>&middot;</li>
         <li><a href="{{l.url}}">{{l.title}}</a></li>
       {% endfor %}
       </ul>
+      <p>Made with <span style="color:#E96040;">&#9829;</span> by <a href="http://bricksandmortarstudio.com">Bricks and Mortar Studio</a></p>
+      <p>
+        {{site.name}} <span id="short-version"> </span> licensed under <a href="{{site.licenseUrl}}" target="_blank">{{site.license}}</a>,
+        documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+      </p>
     </div>
   </footer>
 
 
   <!-- Async scripts
   =========================================== -->
-
+{% if page.download %}
   <script>
   $(document).on('ready', function() {
   var api = 'https://api.github.com/repos/' + 'BricksandMortar' +'/' + 'IdealPostcodes' + '/releases/latest';
@@ -177,23 +150,8 @@ $('#github-download').attr('href', this.zipball_url);
   });
 });
 </script>
+{% endif %}
 
-  {% if site.header.trianglify %}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.1.2/trianglify.min.js"></script>
-  <script>trianglify('{{site.header.color1}}', '{{site.header.color2}}');</script>
-  {% endif %}
-
-  {% if site.twitter.enabled or site.twitter.account %}
-  <script>
-    window.twttr = (function (d,s,id) {
-      var t, js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return; js=d.createElement(s); js.id=id; js.async=1;
-      js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
-      return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
-    }(document, "script", "twitter-wjs"));
-  </script>
-  {% endif %}
 
   {% if site.analytics.account and site.analytics.domain %}
   <script>

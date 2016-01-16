@@ -20,7 +20,25 @@
   <style>
     #content {
       background:{{site.header.color1}};
-      background:linear-gradient(135deg, {{site.header.color1}}, {{site.header.color2}});
+      background-image: linear-gradient(to bottom,{{site.header.color1}},{{site.header.color2}} 100%);
+      background-image: -o-linear-gradient(top,{{site.header.color1}} 0,{{site.header.color2}} 100%);
+      background-image: -webkit-linear-gradient(top,{{site.header.color1}} 0,{{site.header.color2}} 100%);
+    }
+
+    #content:after {
+      content:"";
+      position:absolute;
+      bottom:0px;
+      right:0px;
+      height:50px;
+      width:100%;
+      background-color: #E95F40;
+      background-image: linear-gradient(335deg, #E99F40 23px, transparent 23px),
+      linear-gradient(155deg, #E99F40 23px, transparent 23px),
+      linear-gradient(335deg, #E99F40 23px, transparent 23px),
+      linear-gradient(155deg, #E99F40 23px, transparent 23px);
+      background-size: 58px 58px;
+      background-position: 0px 0px, 4px 33px, 29px 31px, 34px 6px;
     }
   </style>
 
@@ -54,16 +72,9 @@
           </li>
           {% endif %}
         {% endfor %}
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a id="github-repo" href="https://github.com/{{site.github.user}}/{{site.github.repo}}"> <i class="fa fa-github fa-lg"></i> Github</a>
-            </li>
-        {% for p in site.headerLinks %}
-          <li>
-            <a href="{{p.url}}">{{p.title}}</a>
-          </li>
-        {% endfor %}
+        <li>
+          <a id="github-repo" href="https://https://github.com/{{site.github.user}}/{{site.github.repo}}">Github</a>
+        </li>
         </ul>
       </nav>
     </div>
@@ -74,7 +85,7 @@
   =========================================== -->
   {% if page.download %}
   <div class="bs-docs-masthead" id="content">
-    <div class="container">
+    <div class="container not-wall">
       <h1 class="home-title">{{site.name}}</h1>
       <p class="lead">{{page.description}}</p>
       {% if site.rockstore.url %}
@@ -122,7 +133,7 @@
 <img src="{{site.github.url}}/assets/images/logo.svg" />
 <p class="lead">We believe in doing business differently.<br \> All of our plugins are available both for purchase on the Rock Store and freely on Github.</p>
 <p class="lead">
-  <a href="{{site.github.url}}/about.html" class="btn btn-outline btn-lg">Discover Why</a>
+  <a href="http://bricksandmortarstudio.com" class="btn btn-outline btn-lg">Discover Why</a>
 </p>
       </div>
     </div>
@@ -163,12 +174,6 @@ $('#short-version').append(this.tag_name);
   });
 });
 </script>
-
-  {% if site.header.trianglify %}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.1.2/trianglify.min.js"></script>
-  <script>trianglify('{{site.header.color1}}', '{{site.header.color2}}');</script>
-  {% endif %}
 
   {% if site.analytics.account and site.analytics.domain %}
   <script>

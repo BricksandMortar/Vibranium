@@ -1,12 +1,24 @@
 @import "/bootstrap-3.3.6/less/bootstrap.less";
+@import "/docs.min.css";
+
+@red: #E95F40;
+@red-darker : darken(@red, 5%);
+
+@orange: #E99F40;
+@orange-darker: darken(@orange, 5%);
+
+@text: #333;
+@text-contrast: #fff;
+
+@link: #407ce9;
 
 p, h1, h2, h3, h4, h5, h6 {
   color: #333333;
 }
 a {
-  color: #407ce9;
+  color:@link;
   &:hover {
-    color: #407ce9;
+    color: @link;
   }
 }
 
@@ -15,15 +27,19 @@ a {
   padding-bottom:40px;
   margin-bottom:20px;
   .btn:hover {
-    color: #E8773E;
+    color: darken(@red-darker, 10%);
   }
-  .version {
-    color: #fff;
+
+  .not-wall {
+    margin-bottom: 1.2em;
   }
 }
 .bs-docs-header {
   h1, p {
     margin-right:0px;
+  }
+  p {
+    color: #DE7C67;
   }
 }
 .bs-docs-sidebar .nav > li > a {
@@ -45,22 +61,20 @@ a {
 }
 #content {
   position:relative;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
 }
-#content:after {
-  content:"";
-  position:absolute;
-  bottom:0px;
-  right:0px;
-  height:50px;
-  width:30%;
-  background:linear-gradient(135deg,transparent 50px,white 50px);
+
+
+.bs-docs-footer-links .fa
+{
+      margin-right: 3px;
 }
 
 
 
 .landing {
   .fa {
-    color: #E99F40;
+    color: @orange;
   }
 
   p {
@@ -78,6 +92,48 @@ a {
 
 .navbar {
   margin-bottom: 0px;
+}
+
+.navbar-brand {
+  color: #333;
+}
+
+
+/*
+ * Main navigation
+ *
+ * Turn the `.navbar` at the top of the docs purple.
+ */
+
+.bs-docs-nav {
+  margin-bottom: 0;
+  background-color: #fff;
+  border-bottom: 0;
+}
+.bs-home-nav .bs-nav-b {
+  display: none;
+}
+.bs-docs-nav .navbar-brand,
+.bs-docs-nav .navbar-nav > li > a {
+  font-weight: 500;
+  color: @red-darker;
+}
+.bs-docs-nav .navbar-nav > li > a:hover,
+.bs-docs-nav .navbar-nav > .active > a,
+.bs-docs-nav .navbar-nav > .active > a:hover {
+  color: @red-darker;
+  background-color: #f9f9f9;
+}
+.bs-docs-nav .navbar-toggle .icon-bar {
+  background-color: @red-darker;
+}
+.bs-docs-nav .navbar-header .navbar-toggle {
+  border-color: #fff;
+}
+.bs-docs-nav .navbar-header .navbar-toggle:hover,
+.bs-docs-nav .navbar-header .navbar-toggle:focus {
+  background-color: #f9f9f9;
+  border-color: #f9f9f9;
 }
 
 /* Small devices (tablets, 768px and up) */
