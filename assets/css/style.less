@@ -1,5 +1,4 @@
 @import "/bootstrap-3.3.6/less/bootstrap.less";
-@import "/docs.min.css";
 
 @red: #E95F40;
 @red-darker : darken(@red, 5%);
@@ -20,6 +19,15 @@ a {
   &:hover {
     color: @link;
   }
+}
+
+span[data-type="action"] {
+  margin: 0 2px;
+  padding: 0px 5px;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
 }
 
 .bs-docs-masthead {

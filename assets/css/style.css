@@ -1,4 +1,3 @@
-@import "/docs.min.css";
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -6739,6 +6738,14 @@ a {
 }
 a:hover {
   color: #407ce9;
+}
+span[data-type="action"] {
+  margin: 0 2px;
+  padding: 0px 5px;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
 }
 .bs-docs-masthead {
   padding-top: 50px;
