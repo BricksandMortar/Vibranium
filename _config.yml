@@ -12,9 +12,9 @@ headerLinks:
 # list if additional links on the footer
 footerLinks:
   - title: <i class="fa fa-github"></i>GitHub
-    url: https://github.com/mistic100/jekyll-bootstrap-doc
-  - title: <i class="fa fa-exclamation-circle"></i>Issues
-    url: https://github.com/mistic100/jekyll-bootstrap-doc/issues?state=open
+    url: https://github.com/BricksandMortar/plugin-doc-template
+  - title: Issues
+    url: https://github.com/BricksandMortar/plugin-doc-template/issues?state=open
 
 # header
 header:
