@@ -9,7 +9,9 @@ rm -rf ./_site || exit 0;
 #Rebuild with fixed URls
 rm -rf ./_site || exit 0;
 #Fix Github's URLs
-sed -i -r 's|\{\{(\s*)site.github.url(\s*)\}\}|hello|g' *.html
+# find tutorial https://www.digitalocean.com/community/tutorials/how-to-use-find-and-locate-to-search-for-files-on-a-linux-vps
+# Sed tutorial http://www.grymoire.com/Unix/Sed.html#uh-1
+find ./ -name "*.html" -exec sed -i -r 's|\{\{(\s*)site.github.url(\s*)\}\}|{{site.baseurl}}|g' {} \;
 ./script/cibuild.sh
 
 #Deploy to Github gh-pages
