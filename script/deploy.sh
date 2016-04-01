@@ -4,6 +4,7 @@ set -e # exit with nonzero exit code if anything fails
 # clear and re-create the out directory
 rm -rf ./_site || exit 0;
 
+./script/citest.sh
 ./script/cibuild.sh
 
 cd $TRAVIS_BUILD_DIR/_site
