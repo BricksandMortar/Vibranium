@@ -36,9 +36,33 @@ h4 code {
 }
 
 /* Outline button for use within the docs */
-
+.btn-outline {
+  color: #E8773E;
+  background-color: transparent;
+  border-color: #E99F40 !important;
+}
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active {
+  color: #fff !important;
+  background-color: #E99F40;
+  border-color: #E99F40;
+}
 
 /* Inverted outline button (white on dark) */
+.btn-outline-inverse {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff !important;
+}
+.btn-outline-inverse:hover,
+.btn-outline-inverse:focus,
+.btn-outline-inverse:active {
+  color: #E8773E;
+  text-shadow: none;
+  background-color: #fff;
+  border-color: #fff;
+}
 
 
 
@@ -55,6 +79,8 @@ h4 code {
 
 
 
+
+
 /*
  * Footer
  *
@@ -64,7 +90,7 @@ h4 code {
 .bs-docs-footer {
   padding-top: 50px;
   padding-bottom: 50px;
-  margin-top: 100px;
+  margin-top: 3em;
   color: #99979c;
   text-align: center;
   background-color: #2a2730;
@@ -116,12 +142,11 @@ h4 code {
 .bs-docs-masthead h1 {
   font-weight: 300;
   line-height: 1;
-  color: #000;
+  color: #fff;
 }
 .bs-docs-masthead .lead {
   margin: 0 auto;
   font-size: 20px;
-  color: #000;
 }
 
 .bs-docs-masthead+.home .lead {
@@ -130,8 +155,8 @@ h4 code {
 
 .bs-docs-masthead .lead+.final {
   margin-bottom: 0px;
+  color: #fff;
 }
-
 .bs-docs-masthead .download{
   margin: 0 auto 15px;
 }
@@ -139,7 +164,7 @@ h4 code {
 .bs-docs-masthead .version {
   margin-top: -15px;
   margin-bottom: 30px;
-  color: #000;
+  color: #fff;
 }
 .bs-docs-masthead .btn {
   width: 100%;
