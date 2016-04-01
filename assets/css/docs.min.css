@@ -36,64 +36,10 @@ h4 code {
 }
 
 /* Outline button for use within the docs */
-.btn-outline {
-  color: #E8773E;
-  background-color: transparent;
-  border-color: #E99F40 !important;
-}
-.btn-outline:hover,
-.btn-outline:focus,
-.btn-outline:active {
-  color: #fff !important;
-  background-color: #E99F40;
-  border-color: #E99F40;
-}
+
 
 /* Inverted outline button (white on dark) */
-.btn-outline-inverse {
-  color: #fff;
-  background-color: transparent;
-  border-color: #fff !important;
-}
-.btn-outline-inverse:hover,
-.btn-outline-inverse:focus,
-.btn-outline-inverse:active {
-  color: #E8773E;
-  text-shadow: none;
-  background-color: #fff;
-  border-color: #fff;
-}
 
-/* Bootstrap "B" icon */
-.bs-docs-booticon {
-  display: block;
-  font-weight: 500;
-  color: #fff;
-  text-align: center;
-  cursor: default;
-  background-color: #E8773E;
-  border-radius: 15%;
-}
-.bs-docs-booticon-sm {
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  line-height: 28px;
-}
-.bs-docs-booticon-lg {
-  width: 144px;
-  height: 144px;
-  font-size: 108px;
-  line-height: 140px;
-}
-.bs-docs-booticon-inverse {
-  color: #E8773E;
-  background-color: #fff;
-}
-.bs-docs-booticon-outline {
-  background-color: transparent;
-  border: 1px solid #cdbfe3;
-}
 
 
 /*
@@ -103,24 +49,9 @@ h4 code {
  * Also includes focus suppression for the Chrome tabindex="-1" workaround
  */
 
-#skippy {
-  display: block;
-  padding: 1em;
-  color: #fff;
-  background-color: #6f5499;
-  outline: 0;
-}
-
-#skippy .skiplink-text {
-  padding: .5em;
-  outline: 1px dotted;
-}
-
 #content:focus {
   outline: none;
 }
-
-
 
 
 
@@ -133,7 +64,7 @@ h4 code {
 .bs-docs-footer {
   padding-top: 50px;
   padding-bottom: 50px;
-  margin-top: 3em;
+  margin-top: 100px;
   color: #99979c;
   text-align: center;
   background-color: #2a2730;
@@ -173,16 +104,9 @@ h4 code {
 .bs-docs-header {
   position: relative;
   padding: 30px 0;
-  color: #cdbfe3;
+  color: #000;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0,0,0,.1);
-  background-color: #6f5499;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#E8773E), to(#6f5499));
-  background-image: -webkit-linear-gradient(top, #E8773E 0%, #6f5499 100%);
-  background-image:      -o-linear-gradient(top, #E8773E 0%, #6f5499 100%);
-  background-image:         linear-gradient(to bottom, #E8773E 0%, #6f5499 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E8773E', endColorstr='#6F5499', GradientType=0);
-  background-repeat: repeat-x;
 }
 
 /* Masthead (headings and download button) */
@@ -192,13 +116,22 @@ h4 code {
 .bs-docs-masthead h1 {
   font-weight: 300;
   line-height: 1;
-  color: #fff;
+  color: #000;
 }
 .bs-docs-masthead .lead {
-  margin: 0 auto 30px;
+  margin: 0 auto;
   font-size: 20px;
-  color: #fff;
+  color: #000;
 }
+
+.bs-docs-masthead+.home .lead {
+  margin-bottom: 30px;
+}
+
+.bs-docs-masthead .lead+.final {
+  margin-bottom: 0px;
+}
+
 .bs-docs-masthead .download{
   margin: 0 auto 15px;
 }
@@ -206,7 +139,7 @@ h4 code {
 .bs-docs-masthead .version {
   margin-top: -15px;
   margin-bottom: 30px;
-  color: #fff;
+  color: #000;
 }
 .bs-docs-masthead .btn {
   width: 100%;
@@ -1086,20 +1019,6 @@ h1[id] {
   margin-bottom: 15px;
 }
 
-/* Tooltips */
-.bs-example-tooltips {
-  text-align: center;
-}
-.bs-example-tooltips > .btn {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-.bs-example-tooltip .tooltip {
-  position: relative;
-  display: inline-block;
-  margin: 10px 20px;
-  opacity: 1;
-}
 
 /* Popovers */
 .bs-example-popover {
