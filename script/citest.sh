@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-set -e # halt script on erro
+set -e # halt script on error
 
 bundle exec htmlproofer ./_site
