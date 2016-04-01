@@ -130,7 +130,6 @@ h4 code {
 .bs-docs-header {
   position: relative;
   padding: 30px 0;
-  color: #000;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0,0,0,.1);
 }
@@ -145,16 +144,8 @@ h4 code {
   color: #fff;
 }
 .bs-docs-masthead .lead {
-  margin: 0 auto;
+  margin: 0 auto 30px;
   font-size: 20px;
-}
-
-.bs-docs-masthead+.home .lead {
-  margin-bottom: 30px;
-}
-
-.bs-docs-masthead .lead+.final {
-  margin-bottom: 0px;
   color: #fff;
 }
 .bs-docs-masthead .download{
