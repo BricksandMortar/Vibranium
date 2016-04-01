@@ -9,7 +9,7 @@ rm -rf ./_site || exit 0;
 #Rebuild with fixed URls
 rm -rf ./_site || exit 0;
 #Fix Github's URLs
-sed -i -r 's|\{\{(\s*)site.github.url(\s*)\}\}|hello|g' *
+sed -i -r 's|\{\{(\s*)site.github.url(\s*)\}\}|hello|g' *.html
 ./script/cibuild.sh
 
 #Deploy to Github gh-pages
