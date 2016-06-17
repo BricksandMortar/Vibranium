@@ -53,9 +53,6 @@
       </div>
       <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
         <ul class="nav navbar-nav">
-          <li>
-            <a href="{{site.github.url}}">Home</a>
-          </li>
         {% assign sorted_pages = site.pages | sort:"name" %}
         {% for p in sorted_pages %}
           {% if p.download != true and p.hide != true and p.title !=  %}
@@ -150,13 +147,16 @@
 {% if page.download %}
   <script>
   $(document).on('ready', function() {
-  var api = 'https://api.github.com/repos/' + 'BricksandMortar' +'/' + 'IdealPostcodes' + '/releases/latest';
+  var api = 'https://api.github.com/repos/' + 'BricksandMortar' +'/' + '{{site.github.repo}}' + '/releases/latest';
   $.getJSON( api)
   .done(function( data ) {
     $(data).each(function() {
 $('.version').append(this.name).attr('href', this.html_url);
 $('#github-download').attr('href', this.zipball_url);
     });
+  })
+  .fail(function() {
+    console.log( "Error getting Github URL" );
   });
 });
 </script>
