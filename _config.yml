@@ -1,5 +1,5 @@
 # name of the software
-name: PLUGIN NAME HERE
+name: REPLACE
 # licence of the software
 license: Apache 2.0
 licenseUrl: http://www.apache.org/licenses/LICENSE-2.0.html
@@ -14,9 +14,9 @@ headerLinks:
 # list if additional links on the footer
 footerLinks:
   - title: <i class="fa fa-github"></i>GitHub
-    url: https://github.com/BricksandMortar/PLUGINNAMEHERE
+    url: https://github.com/BricksandMortar/REPLACE
   - title: Issues
-    url: https://github.com/BricksandMortar/PLUGINNAMEHERE/issues?state=open
+    url: https://github.com/BricksandMortar/REPLACE/issues?state=open
 
 # header
 header:
@@ -36,7 +36,7 @@ analytics:
 # github buttons
 github:
   user: BricksandMortar
-  repo: PLUGINNAMHERE
+  repo: REPLACE
 
 # twitter buttons
 twitter:
