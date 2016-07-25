@@ -25,6 +25,8 @@ header:
   color1: "#E64C29"
   color2: "#E64C29"
 
+logo: /assets/images/logo.png
+
 rockstore:
   url:
 
