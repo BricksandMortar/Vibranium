@@ -19,4 +19,4 @@ sed -i -e 's/$VERSION_NUMBER/'$TRAVIS_BUILD_NUMBER'/g' ./_layouts/*.html
 # Replace the !NAME variable in _config.yml with the $NAME env variable from .travis.yml
 # Replace the !REPO variable in _config.yml with the $REPO env variable from .travis.yml
 echo "NAME: $NAME, REPO: $REPO"
-sed -i -e 's/!NAME/'$NAME'/' -e 's/!REPO/'$REPO'/' ./_config.yml  -e 's/'#baseurl'/baseurl/' ./_config.yml 
+sed -i -e "s/!NAME/'$NAME'/" -e "s/!REPO/'$REPO'/" -e "s/'#baseurl'/baseurl/" ./_config.yml 
