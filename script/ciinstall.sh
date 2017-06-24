@@ -16,13 +16,7 @@ echo "Replacing $VERSION_NUMBER with $TRAVIS_BUILD_NUMBER"
 sed -i -e 's/$VERSION_NUMBER/'$TRAVIS_BUILD_NUMBER'/g' ./_layouts/*.html 
  
 # Replace the commented base url variable (this is used to correctly build the site for production) 
-echo "Uncommenting #baseurl"
-sed -i -e  's/'#baseurl'/baseurl/' ./_config.yml 
-
 # Replace the !NAME variable in _config.yml with the $NAME env variable from .travis.yml
-echo "Replacing !NAME with $NAME"
-sed -i -e  's/!NAME/'$NAME'/' ./_config.yml 
-
-echo "Replacing !REPO with $REPO"
 # Replace the !REPO variable in _config.yml with the $REPO env variable from .travis.yml
-sed -i -e  's/!REPO/'$REPO'/' ./_config.yml 
+echo "NAME: $NAME, REPO: $REPO"
+sed -i -e 's/!NAME/$NAME/' -e 's/!REPO/$REPO/' ./_config.yml  -e 's/'#baseurl'/baseurl/' ./_config.yml 
