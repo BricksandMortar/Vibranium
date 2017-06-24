@@ -11,6 +11,10 @@ cd $TRAVIS_BUILD_DIR
 # Install gems from the gemfile
 bundle install
 
+# Install python3
+sudo apt-get update
+sudo apt-get install python3
+
 # Replace the suffix $VERSION_NUMBER with the env variable $TRAVIS_BUILD_NUMBER on all assets to prevent caching
 echo "Replacing \$VERSION_NUMBER with $TRAVIS_BUILD_NUMBER"
 sed -i -e 's/$VERSION_NUMBER/'$TRAVIS_BUILD_NUMBER'/g' ./_layouts/*.html
